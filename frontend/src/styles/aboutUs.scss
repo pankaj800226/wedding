@@ -1,0 +1,132 @@
+@import "color";
+.about_one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+.about_section_two {
+  background-color: $ten;
+  height: 20vh;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.wedding_contact {
+  margin: 1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  .about_left {
+    width: 100%;
+    background-color: $ten;
+    padding: 10px;
+ 
+  }
+
+  .about_right {
+    padding: 10px;
+    width: 100%;
+    background-color: $ten;
+  }
+}
+
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 1rem;
+  margin: 1rem;
+  .about_left {
+    background-color: $nine;
+    width: 100%;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th {
+      border-top: 3px solid $twelve;
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: left;
+      border-bottom: 3px solid $eleven;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1.5px solid #ddd;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: $ten;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: rgb(188, 188, 232);
+    }
+  }
+
+  .about_right {
+    background-color: $nine;
+    width: 100%;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th {
+      border-top: 3px solid $twelve;
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: left;
+      border-bottom: 3px solid $eleven;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1.5px solid #ddd;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: $ten;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: rgb(188, 188, 232);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about_container {
+    grid-template-columns: 1fr;
+  }
+
+  .about_section_two {
+    width: 90%;
+    // height: auto;
+    h2 {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+  .wedding_contact{
+    padding: 0;
+    flex-direction: column;
+    // text-align: center;
+  }
+}

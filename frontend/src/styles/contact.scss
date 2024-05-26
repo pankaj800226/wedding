@@ -1,0 +1,81 @@
+@import "color";
+.contact_container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 10vh;
+  border: 1px solid $nine;
+  border-radius: 8px;
+  background-color: $nine;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact_container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  &:focus {
+    border: 1.6px solid $twelve;
+  }
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: $first;
+  background-color: #0a0a12;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: $eight;
+}
+
+.form-group span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-group span a {
+  color: #007bff;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.form-group span a:hover {
+  text-decoration: underline;
+}
+
+.Auth_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact_container {
+    max-width: 95%;
+  }
+}

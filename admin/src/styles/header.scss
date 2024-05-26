@@ -1,0 +1,127 @@
+@import "color";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+  background-color: $eight;
+  color: $first;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar__logo {
+  a {
+    color: $first;
+    text-decoration: none;
+    color: $second;
+    font-size: 18px;
+  }
+}
+.navbar__logo img {
+  height: 40px;
+}
+
+.navbar__toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  transition: transform 0.5s ease;
+}
+
+.navbar__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  .logOut_btn {
+    // display: none;
+    padding: 10px 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: $second;
+    font-weight: 600;
+    margin: 10px;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 1.1px solid $second;
+      background-color: transparent;
+      color: $second;
+    }
+  }
+}
+
+.navbar__menu li {
+  padding: 0.5rem 1rem;
+}
+
+.navbar__menu a {
+  text-decoration: none;
+  color: $first;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+  font-size: 18px;
+  &:hover {
+    color: $second;
+  }
+}
+
+.navbar__cart {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  button {
+    padding: 10px 18px;
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: $second;
+    font-weight: 600;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 1.1px solid $second;
+      background-color: transparent;
+      color: $second;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: $four;
+    padding: 1rem 0;
+    transition: transform 0.5s ease;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    .logOut_btn {
+      // display: block;
+    }
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+
+}
